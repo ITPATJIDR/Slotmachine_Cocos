@@ -1,5 +1,6 @@
 import { _decorator, Component, Node, Vec3, systemEvent, SystemEvent } from 'cc';
 const { ccclass, property } = _decorator;
+import _ from "lodash"
 
 @ccclass('Slot')
 export class Slot extends Component {
@@ -17,7 +18,7 @@ export class Slot extends Component {
     positionBottom = 569.519
 
     @property
-    speed = 10
+    speed = 20
 
     @property
     spinner = 0
@@ -39,23 +40,25 @@ export class Slot extends Component {
         console.log("speed: ",this.speed)
         console.log("click: ",this.isClick)
         if(this.isClick) {
+            this.startSpin();
             if (this.positionCurrent <= this.positionBottom) {
-                const newPositionY = (this.positionCurrent += Number(this.speed));
+                const newPositionY = (this.positionCurrent += Number(this.speed) * Math.random());
                 this.Reel.position = new Vec3(0, newPositionY, 0);
             } else {
                 this.positionCurrent = this.positionTop;
             }
-            this.startSpin();
         }
     }
 
     startSpin() {
         this.spinner += 1;
-        if (this.spinner <= 10) {
+        if (this.spinner < 10) {
             console.log('HI')
             if (this.speed < 35) {
+            console.log('HI2')
                 this.speed += 1;
             } else {
+            console.log('HI3')
                 this.speed = 35;
             }
         }
@@ -65,10 +68,51 @@ export class Slot extends Component {
             if (this.speed > 0) {
                 this.speed -= 0.5;
             } else {
+                this.checkSlot(this.Reel.position.y)
                 this.speed = 0;
                 this.isClick = false;
                 this.spinner = 0;
             }
         }
+    }
+
+    checkSlot(position: number){
+        const Slot = [
+            {
+                face:"Diamond",
+                position: -581
+            },
+            {
+                face:"Drowd",
+                position: -417
+            },
+            {
+                face:"WaterMalon",
+                position: -249
+            },
+            {
+                face:"Bar",
+                position: -88
+            },
+            {
+                face:"Seven",
+                position: 77
+            },
+            {
+                face:"Cherry",
+                position: 245
+            },
+            {
+                face:"Lemon  ",
+                position: 414
+            },
+            {
+                face:"Diamond2",
+                position: 569
+            },
+        ]
+
+        const checkExists = _.filter(Slot,{ position: position})
+        console.log("CheckExists: ",checkExists)
     }
 }
