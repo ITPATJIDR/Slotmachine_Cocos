@@ -5,6 +5,7 @@
     "version": "3.7.3"
   },
   "dependencies": {
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "lodash-fp": "^0.10.4"
   }
 }

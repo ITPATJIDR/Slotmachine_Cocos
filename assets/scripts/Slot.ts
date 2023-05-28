@@ -1,6 +1,6 @@
 import { _decorator, Component, Node, Vec3, systemEvent, SystemEvent } from 'cc';
 const { ccclass, property } = _decorator;
-import _ from "lodash"
+import _ from "lodash/fp"
 
 @ccclass('Slot')
 export class Slot extends Component {
@@ -40,13 +40,13 @@ export class Slot extends Component {
         console.log("speed: ",this.speed)
         console.log("click: ",this.isClick)
         if(this.isClick) {
-            this.startSpin();
             if (this.positionCurrent <= this.positionBottom) {
                 const newPositionY = (this.positionCurrent += Number(this.speed) * Math.random());
                 this.Reel.position = new Vec3(0, newPositionY, 0);
             } else {
                 this.positionCurrent = this.positionTop;
             }
+            this.startSpin();
         }
     }
 
@@ -112,7 +112,24 @@ export class Slot extends Component {
             },
         ]
 
-        const checkExists = _.filter(Slot,{ position: position})
-        console.log("CheckExists: ",checkExists)
+        const nearbyValue = 100
+        const nearbyObject =[];
+        for (let i = 0; i < Slot.length; i++){
+            const currentPosition = Slot[i].position;
+            const diff = Math.abs(currentPosition - position)
+
+            if (diff <= nearbyValue){
+                nearbyObject.push(Slot[i])
+            }
+        }
+
+        console.log("nearbyObject:",nearbyObject)
+        console.log("nearbyObject:",nearbyObject[0].position)
+        if(nearbyObject.length <= 1){
+            console.log("new Position")
+            this.Reel.position = new Vec3(0, nearbyObject[0].position, 0);
+        }else{
+            console.log("nearbyObject 2")
+        }
     }
 }

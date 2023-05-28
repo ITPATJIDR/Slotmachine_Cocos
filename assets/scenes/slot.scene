@@ -177,7 +177,7 @@
     "_priority": 0,
     "_fov": 45,
     "_fovAxis": 0,
-    "_orthoHeight": 484.51410658307213,
+    "_orthoHeight": 320,
     "_near": 0,
     "_far": 1000,
     "_color": {
@@ -344,7 +344,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": -144.746,
-      "y": 60.928,
+      "y": 57.524,
       "z": 0
     },
     "_lrot": {
@@ -391,7 +391,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": -419.732,
+      "y": -249.79,
       "z": 0
     },
     "_lrot": {
@@ -513,6 +513,27 @@
     "_id": "209iVr0RFN5K0D5jK+1Wbb"
   },
   {
+    "__type__": "4eb10ybcqpH5JFzjL/liKTF",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 8
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "Slot": {
+      "__id__": 8
+    },
+    "Reel": {
+      "__id__": 9
+    },
+    "positionTop": -591.104,
+    "positionBottom": 569.519,
+    "speed": 35,
+    "spinner": 0,
+    "_id": "48GVheHrhAbYqz7JY78qFn"
+  },
+  {
     "__type__": "cc.Graphics",
     "_name": "",
     "_objFlags": 0,
@@ -549,28 +570,7 @@
       "a": 0
     },
     "_miterLimit": 10,
-    "_id": "94T607zMdCgb4iioRiCA4u"
-  },
-  {
-    "__type__": "4eb10ybcqpH5JFzjL/liKTF",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 8
-    },
-    "_enabled": true,
-    "__prefab": null,
-    "Slot": {
-      "__id__": 8
-    },
-    "Reel": {
-      "__id__": 9
-    },
-    "positionTop": -591.104,
-    "positionBottom": 569.519,
-    "speed": 35,
-    "spinner": 0,
-    "_id": "48GVheHrhAbYqz7JY78qFn"
+    "_id": "97983t93dEeb60E0Tgb7nx"
   },
   {
     "__type__": "cc.Node",
@@ -631,7 +631,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "Row-2",
+    "_name": "Row-1",
     "_objFlags": 0,
     "_parent": {
       "__id__": 16
@@ -649,8 +649,8 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": -4.478,
-      "y": -90.617,
+      "x": 0.467,
+      "y": -581.233,
       "z": 0
     },
     "_lrot": {
@@ -662,8 +662,8 @@
     },
     "_lscale": {
       "__type__": "cc.Vec3",
-      "x": 1.124,
-      "y": 1.161,
+      "x": 0.989,
+      "y": 1.096,
       "z": 1
     },
     "_mobility": 0,
@@ -674,7 +674,7 @@
       "y": 0,
       "z": 0
     },
-    "_id": "87jIleGx9FLaqrMR/HLw4f"
+    "_id": "68MaEnh4tLLplDzEAO05kc"
   },
   {
     "__type__": "cc.UITransform",
@@ -695,7 +695,7 @@
       "x": 0.5,
       "y": 0.5
     },
-    "_id": "72/Smh0mJMHK6eWrAfOH/O"
+    "_id": "eebhyyLplBobB5vVQ38g46"
   },
   {
     "__type__": "cc.Sprite",
@@ -733,7 +733,7 @@
     "_isTrimmedMode": true,
     "_useGrayscale": false,
     "_atlas": null,
-    "_id": "96Jt6p2N1NjaiXvmoj8Y1F"
+    "_id": "e4Decl2ORNp6c9HUd1GByr"
   },
   {
     "__type__": "cc.UITransform",
@@ -826,7 +826,7 @@
     },
     "positionTop": -591.104,
     "positionBottom": 569.519,
-    "speed": 10,
+    "speed": 35,
     "spinner": 0,
     "_id": "78QtL3KgdAoIv3WQyiq8Yp"
   },
@@ -889,7 +889,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "Row-3",
+    "_name": "Row-1",
     "_objFlags": 0,
     "_parent": {
       "__id__": 24
@@ -907,8 +907,8 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 1.12,
-      "y": 267.726,
+      "x": 5.944,
+      "y": -581.233,
       "z": 0
     },
     "_lrot": {
@@ -920,8 +920,8 @@
     },
     "_lscale": {
       "__type__": "cc.Vec3",
-      "x": 0.977,
-      "y": 1.185,
+      "x": 0.989,
+      "y": 1.096,
       "z": 1
     },
     "_mobility": 0,
@@ -932,7 +932,7 @@
       "y": 0,
       "z": 0
     },
-    "_id": "4dOt3TXbJOQpkwLWfNzILv"
+    "_id": "dcpuRanUZPOI3KjFNuKFVu"
   },
   {
     "__type__": "cc.UITransform",
@@ -953,7 +953,7 @@
       "x": 0.5,
       "y": 0.5
     },
-    "_id": "1cb13gLsZGGJeuvhct3Pz7"
+    "_id": "a9BUhqnqBGpaAqzPmQjwwY"
   },
   {
     "__type__": "cc.Sprite",
@@ -991,7 +991,7 @@
     "_isTrimmedMode": true,
     "_useGrayscale": false,
     "_atlas": null,
-    "_id": "1elnJLapBKKrG5AAzXi2D2"
+    "_id": "306BkfKYxIXbYGYLqH5kkv"
   },
   {
     "__type__": "cc.UITransform",
@@ -1085,7 +1085,7 @@
     },
     "positionTop": -591.104,
     "positionBottom": 569.519,
-    "speed": 10,
+    "speed": 35,
     "spinner": 0,
     "_id": "78BsyQaCVGG6s2r5Nf++X+"
   },
