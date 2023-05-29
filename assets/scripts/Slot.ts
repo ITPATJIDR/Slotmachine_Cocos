@@ -41,7 +41,7 @@ export class Slot extends Component {
         console.log("click: ",this.isClick)
         if(this.isClick) {
             if (this.positionCurrent <= this.positionBottom) {
-                const newPositionY = (this.positionCurrent += Number(this.speed) * Math.random());
+                const newPositionY = (this.positionCurrent += Number(this.speed) * (Math.random() * 9));
                 this.Reel.position = new Vec3(0, newPositionY, 0);
             } else {
                 this.positionCurrent = this.positionTop;
@@ -53,12 +53,9 @@ export class Slot extends Component {
     startSpin() {
         this.spinner += 1;
         if (this.spinner < 10) {
-            console.log('HI')
             if (this.speed < 35) {
-            console.log('HI2')
                 this.speed += 1;
             } else {
-            console.log('HI3')
                 this.speed = 35;
             }
         }
@@ -83,7 +80,7 @@ export class Slot extends Component {
                 position: -581
             },
             {
-                face:"Drowd",
+                face:"Crowd",
                 position: -417
             },
             {
@@ -123,13 +120,11 @@ export class Slot extends Component {
             }
         }
 
-        console.log("nearbyObject:",nearbyObject)
-        console.log("nearbyObject:",nearbyObject[0].position)
         if(nearbyObject.length <= 1){
-            console.log("new Position")
             this.Reel.position = new Vec3(0, nearbyObject[0].position, 0);
         }else{
-            console.log("nearbyObject 2")
+            const random = Math.floor(Math.random() * 2) + 1;
+            this.Reel.position = new Vec3(0, nearbyObject[random - 1].position, 0);
         }
     }
 }
